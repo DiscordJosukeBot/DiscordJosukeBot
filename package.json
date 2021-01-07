@@ -1,0 +1,24 @@
+{
+  "name": "Discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "discord.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciomeczek/DiscordJosukeBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ciomeczek/DiscordJosukeBot/issues"
+  },
+  "homepage": "https://github.com/ciomeczek/DiscordJosukeBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "select-random-file": "^1.1.0"
+  }
+}
