@@ -10,23 +10,16 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
-    //const cuttedMsg = msg.content.toLowerCase().includes('jebać anime')
-
-    for (let element of animeMsg) {
+    animeMsg.every((element, index) => {
         if (msg.content.toLowerCase().includes(element)) {
             randomFile("./Anime", (err, file) => {
                 if (err) throw err
-                msg.reply("ciebie też", { files: ["./Anime/" + file] })
+                msg.reply("Ciebie też", { files: ["./Anime/" + file] })
             })
+            return false
         }
-        break
-    }
-
-    // if (cuttedMsg === 'jebać anime' || cuttedMsg === 'jebac anime') {
-    //     randomFile("./Anime", (err, file) => {
-    //         if (err) throw err
-    //         msg.reply("Ciebie też", { files: ["./Anime/" + file] })
-    //     })
-    // }
+        else return true
+    })
 })
+
 client.login(process.env.BOT_TOKEN)
