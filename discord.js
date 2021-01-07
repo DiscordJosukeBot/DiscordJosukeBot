@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const randomFile = require('select-random-file')
+require('dotenv').config()
 const client = new Discord.Client()
 
 client.on('ready', () => {
@@ -14,4 +15,4 @@ client.on('message', msg => {
         })
     }
 })
-client.login('NzY3NzIxNzUzNTQzNTczNTA0.X42CmQ.OQXVv1nfdOuEiyop8eJGOzGcoCQ')
+client.login(process.env.BOT_TOKEN)
