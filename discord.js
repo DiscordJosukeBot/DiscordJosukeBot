@@ -3,7 +3,7 @@ const randomFile = require('select-random-file')
 require('dotenv').config()
 const client = new Discord.Client()
 
-const animeMsg = ['jebać anime', 'jebac anime', 'jevac anime', 'jebać animu', 'jebac animu', 'j e b a c a n i m e']
+const animeMsg = ['jebać anime', 'jebac anime', 'jevac anime', 'jebać animu', 'jebac animu', 'j e b a c a n i m e', 'j e b a c     a n i m e']
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`)
