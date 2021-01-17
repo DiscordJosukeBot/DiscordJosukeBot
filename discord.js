@@ -34,19 +34,19 @@ client.on('message', msg => {
     })
 })
 
-cron.schedule('37 21 * * *', () => {
-    try {
-        const channel = client.channels.cache.get('786236519081836544')
-        channel.send('PAPIEŻ CZAS' + ' a i weźcie no wyślijcie mi jakieś memy bo troche cringe że tylko jedno się wyświetla')
-        for (i = 0; i < 3; i++) {
-            randomFile("./Pope", (err, file) => {
-                if (err) throw err
-                channel.send({ files: ["./Pope/" + file] })
-            })
-        }
-    } catch (error) {
-        console.error(error)
-    }
-})
+// cron.schedule('37 21 * * *', () => {
+//     try {
+//         const channel = client.channels.cache.get('786236519081836544')
+//         channel.send('PAPIEŻ CZAS' + ' a i weźcie no wyślijcie mi jakieś memy bo troche cringe że tylko jedno się wyświetla')
+//         for (i = 0; i < 3; i++) {
+//             randomFile("./Pope", (err, file) => {
+//                 if (err) throw err
+//                 channel.send({ files: ["./Pope/" + file] })
+//             })
+//         }
+//     } catch (error) {
+//         console.error(error)
+//     }
+//})
 
 client.login(process.env.BOT_TOKEN)
