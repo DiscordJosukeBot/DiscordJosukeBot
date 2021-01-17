@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const randomFile = require('select-random-file')
+const cron = require('node-cron')
 require('dotenv').config()
 const client = new Discord.Client()
 
@@ -31,6 +32,15 @@ client.on('message', msg => {
         }
         else return true
     })
+})
+
+cron.schedule('46 21 * * *', () => {
+    try {
+        client.channels.cache.get('786236519081836544').send('Tymczasowa papieżówka')
+        console.log('papaj')
+    } catch (error) {
+        console.error(error)
+    }
 })
 
 client.login(process.env.BOT_TOKEN)
