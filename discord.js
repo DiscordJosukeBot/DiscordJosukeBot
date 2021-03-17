@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const randomFile = require('select-random-file')
-//const cron = require('node-cron')
 require('dotenv').config()
 const client = new Discord.Client()
 
@@ -12,6 +11,7 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
+    //Sending messages
     animeMsg.every((element, index) => {
         if (msg.content.toLowerCase().includes(element)) {
             randomFile("./Anime", (err, file) => {
@@ -32,21 +32,7 @@ client.on('message', msg => {
         }
         else return true
     })
+    //
 })
-
-// cron.schedule('37 21 * * *', () => {
-//     try {
-//         const channel = client.channels.cache.get('786236519081836544')
-//         channel.send('PAPIEŻ CZAS' + ' a i weźcie no wyślijcie mi jakieś memy bo troche cringe że tylko jedno się wyświetla')
-//         for (i = 0; i < 3; i++) {
-//             randomFile("./Pope", (err, file) => {
-//                 if (err) throw err
-//                 channel.send({ files: ["./Pope/" + file] })
-//             })
-//         }
-//     } catch (error) {
-//         console.error(error)
-//     }
-//})
 
 client.login(process.env.BOT_TOKEN)
