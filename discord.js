@@ -11,7 +11,6 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
-    //Sending messages
     animeMsg.every((element, index) => {
         if (msg.content.toLowerCase().includes(element)) {
             randomFile("./Anime", (err, file) => {
@@ -32,7 +31,12 @@ client.on('message', msg => {
         }
         else return true
     })
-    //
+
+
+
+    const lowerMsg = msg.content.toLocaleLowerCase;
+    if (lowerMsg.includes("simp") || lowerMsg.includes("konfiden") && lowerMsg.includes("najwiekszy") || lowerMsg.includes("największy") && lowerMsg.includes("jak się nazywa") || lowerMsg.includes("jak sie nazywa") || lowerMsg.includes("kto"))
+        msg.channel.send("<@412266826983145482>");
 })
 
 client.login(process.env.BOT_TOKEN)
