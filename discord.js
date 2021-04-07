@@ -31,18 +31,6 @@ client.on('message', msg => {
         }
         else return true
     })
-
-
-
-    const lowerMsg = msg.content.toLocaleLowerCase();
-    if (lowerMsg.includes("simp") || lowerMsg.includes("konfiden") && lowerMsg.includes("najwiekszy") || lowerMsg.includes("największy") && lowerMsg.includes("jak się nazywa") || lowerMsg.includes("jak sie nazywa") || lowerMsg.includes("kto")) {
-        if (lowerMsg.includes("simp")) {
-            msg.channel.send("<@412266826983145482> to największy simp");
-        }
-        if (lowerMsg.includes("konfiden")) {
-            msg.channel.send("<@412266826983145482> to największy konfident");
-        }
-    }
 })
 
-client.login(process.env.BOT_TOKEN)
+client.login('NzY3NzIxNzUzNTQzNTczNTA0.X42CmQ.TZpUj2pZzg62sBR3MJ1m-39BgpM')
