@@ -31,6 +31,15 @@ client.on('message', msg => {
         }
         else return true
     })
+
+
+    if (msg.content.toLowerCase() == "$dawaj karty") {
+        for (var x = 0; x < 10; x++) {
+            setTimeout(() => {
+                msg.channel.send("$h")
+            }, 10000)
+        }
+    }
 })
 
 client.login(process.env.BOT_TOKEN)
