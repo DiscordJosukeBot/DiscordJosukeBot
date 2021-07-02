@@ -33,8 +33,8 @@ client.on('message', msg => {
     })
 
 
-    if (msg.author.id === "412266826983145482") //701147331856302200
-        msg.react(":animeemotkaebywkurzacmaciasa:")
+    if (msg.author.id === "412266826983145482")
+        msg.react(msg.guild.emojis.cache.get("860233416405418044"))
 
 })
 // console.log(process.env.BOT_TOKEN)
