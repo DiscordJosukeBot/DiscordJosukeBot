@@ -37,5 +37,5 @@ client.on('message', msg => {
         msg.react(":animeemotkaebywkurzacmaciasa:")
 
 })
-
+// console.log(process.env.BOT_TOKEN)
 client.login(process.env.BOT_TOKEN)
