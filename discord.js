@@ -33,13 +33,9 @@ client.on('message', msg => {
     })
 
 
-    if (msg.content.toLowerCase() == "$dawaj karty") {
-        for (var x = 0; x < 10; x++) {
-            setTimeout(() => {
-                msg.channel.send("$h")
-            }, 10000)
-        }
-    }
+    if (msg.author.id === "412266826983145482") //701147331856302200
+        msg.react(":animeemotkaebywkurzacmaciasa:")
+
 })
 
 client.login(process.env.BOT_TOKEN)
