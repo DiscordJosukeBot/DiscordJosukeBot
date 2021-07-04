@@ -33,13 +33,27 @@ client.on('message', msg => {
     })
 
 
-    if (msg.author.id === "701147331856302200")
+    if (msg.author.id === "701147331856302200") {
         msg.react(msg.guild.emojis.cache.get("860233416405418044"))
+
+        const letters = ['🇵', '🇪', '🇳', '🇮', '🇸']
+
+        letters.forEach((letter) => {
+            msg.react(letter)
+        })
+    }
     else if (msg.author.id === "754370551086055496")
         msg.react(msg.guild.emojis.cache.get("807989161839034452"))
     else if (msg.author.id === "834314818248507452")
         msg.react(msg.guild.emojis.cache.get("808006588975153153"))
+    else if (msg.author.id === "351997517572997132") {
+        const letters = ['🇸', '🇮', '🇲', '🇵']
+
+        letters.forEach((letter) => {
+            msg.react(letter)
+        })
+    }
 
 })
-// console.log(process.env.BOT_TOKEN)
+
 client.login(process.env.BOT_TOKEN)
