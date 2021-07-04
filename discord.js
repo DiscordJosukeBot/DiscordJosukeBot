@@ -37,6 +37,8 @@ client.on('message', msg => {
         msg.react(msg.guild.emojis.cache.get("860233416405418044"))
     else if (msg.author.id === "754370551086055496")
         msg.react(msg.guild.emojis.cache.get("807989161839034452"))
+    else if (msg.author.id === "834314818248507452")
+        msg.react(msg.guild.emojis.cache.get("808006588975153153"))
 
 })
 // console.log(process.env.BOT_TOKEN)
