@@ -32,11 +32,10 @@ client.on('message', msg => {
         else return true
     })
 
-
     if (msg.author.id === "701147331856302200") {
         msg.react(msg.guild.emojis.cache.get("860233416405418044"))
 
-        const letters = ['🇵', '🇪', '🇳', '🇮', '🇸']
+        const letters = ['🇵', '🇪', '🇳', '🇮', '🇸', '🇨', '🇭', '🇺', '🇯']
 
         letters.forEach((letter) => {
             msg.react(letter)
@@ -53,7 +52,6 @@ client.on('message', msg => {
             msg.react(letter)
         })
     }
-
 })
 
 client.login(process.env.BOT_TOKEN)
