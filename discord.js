@@ -52,6 +52,11 @@ client.on('message', msg => {
             msg.react(letter)
         })
     }
+
+    if (msg.content == "Jednorazowe losu losu")
+    {
+        msg.reply(Math.floor(Math.random() * (2 - 1 + 1)) + 1)
+    }
 })
 
 client.login(process.env.BOT_TOKEN)
