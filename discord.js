@@ -17,7 +17,8 @@ client.on('message', msg => {
         return
 
     simpMsg.every((element, index) => {
-        if (msg.content.toLowerCase().includes(element)) {
+
+        if (msg.content.toLowerCase().includes(element) && msg.author.id != "767721753543573504") {
             randomFile("./Simp", (err, file) => {
                 if (err) throw err
                 msg.reply("S I M P", { files: ["./Simp/" + file] })
