@@ -6,6 +6,8 @@ const client = new Discord.Client()
 const animeMsg = ['jebać anime', 'jebac anime', 'jevac anime', 'jebać animu', 'jebac animu', 'j e b a c a n i m e', 'j e b a c a n i m e', 'jeba anime', "Jebač anime"]
 const noAnime = ['no anime', 'n o a n i m e']
 
+const simpMsg = ['simp', 's i m p']
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`)
 })
@@ -13,6 +15,17 @@ client.on('ready', () => {
 client.on('message', msg => {
     if (msg.author.id == "412266826983145482")
         return
+
+    simpMsg.every((element, index) => {
+        if (msg.content.toLowerCase().includes(element)) {
+            randomFile("./Simp", (err, file) => {
+                if (err) throw err
+                msg.reply("S I M P", { files: ["./Simp/" + file] })
+            })
+            return false
+        }
+        else return true
+    })
 
     animeMsg.every((element, index) => {
         if (msg.content.toLowerCase().includes(element)) {
