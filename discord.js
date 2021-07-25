@@ -11,6 +11,9 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
+    if (msg.author.id == "412266826983145482")
+        return
+
     animeMsg.every((element, index) => {
         if (msg.content.toLowerCase().includes(element)) {
             randomFile("./Anime", (err, file) => {
@@ -53,8 +56,7 @@ client.on('message', msg => {
         })
     }
 
-    if (msg.content == "Jednorazowe losu losu")
-    {
+    if (msg.content == "Jednorazowe losu losu") {
         msg.reply(Math.floor(Math.random() * (2 - 1 + 1)) + 1)
     }
 })
