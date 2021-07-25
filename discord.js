@@ -19,10 +19,16 @@ client.on('message', msg => {
     simpMsg.every((element, index) => {
 
         if (msg.content.toLowerCase().includes(element) && msg.author.id != "767721753543573504") {
-            randomFile("./Simp", (err, file) => {
-                if (err) throw err
-                msg.reply("S I M P", { files: ["./Simp/" + file] })
-            })
+            var x = true
+
+            while (x) {
+                randomFile("./Simp", (err, file) => {
+                    if (err) throw err;
+                    x = file == "desktop.ini"
+                })
+            }
+            msg.reply("S I M P", { files: ["./Simp/" + file] })
+
             return false
         }
         else return true
