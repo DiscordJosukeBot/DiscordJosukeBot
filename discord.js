@@ -29,7 +29,7 @@ client.on('message', msg => {
     })
 
     animeMsg.every((element, index) => {
-        if (msg.content.toLowerCase().includes(element)) {
+        if (msg.content.toLowerCase().includes(element) && msg.author.id != "767721753543573504") {
             randomFile("./Anime", (err, file) => {
                 if (err) throw err
                 msg.reply("Ciebie też", { files: ["./Anime/" + file] })
