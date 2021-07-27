@@ -17,7 +17,6 @@ client.on('message', msg => {
     //     return
 
     simpMsg.every((element, index) => {
-        msg.reply(`Debugowanie: ${index}`)
         if (msg.content.toLowerCase().includes(element)) {
             randomFile("./Simp", (err, file) => {
                 if (err) throw err;
