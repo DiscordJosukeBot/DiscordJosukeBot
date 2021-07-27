@@ -13,8 +13,8 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
-    if (msg.author.id == "412266826983145482")
-        return
+    // if (msg.author.id == "412266826983145482")
+    //     return
 
     simpMsg.every((element, index) => {
         msg.reply(`Debugowanie: ${index}`)
